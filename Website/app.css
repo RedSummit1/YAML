@@ -1,0 +1,27 @@
+body{
+	background: linear-gradient(rgb(255, 255, 255), rgb(255, 0, 0));
+	height: 100vh;
+	padding:0px;
+	margin:0px;
+}
+#flex_whole{
+	display:flex;
+	justify-content:center;
+	width:100vw;
+	border:1px solid black;
+}
+.title_card{
+	height:5rem;
+	width:95%;
+	border:1px solid black;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	/* padding: 0 1rem; */
+}
+
+.title_card img{
+	height:100%;
+
+}
+
