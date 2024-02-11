@@ -9,6 +9,7 @@ body{
 	justify-content:center;
 	width:100vw;
 	border:1px solid black;
+	/* margin: 1rem 0; */
 }
 .title_card{
 	height:5rem;
@@ -19,9 +20,55 @@ body{
 	justify-content:space-between;
 	/* padding: 0 1rem; */
 }
-
 .title_card img{
 	height:100%;
 
 }
+.graphic_container{
+	margin: 0.5rem 0;
+	display:flex;
+	border:1px solid black;
+	flex-direction:row;
+	justify-content:center;
+
+}
+#binary{
+	border:4px solid orange;
+	padding:0;
+	position:relative;
+}
+#binary img{
+	margin:0;
+	width:15rem;
+	height:8rem;
+	position:relative;
+}
+#binary .yaml_clip{
+	font-family:'Black Ops One', system-ui;
+	color:rgba(81,83,78,1);
+	font-size:4.1rem;
+	text-align:center;
+	line-height:3.75rem;
+	background-clip:text;
+	display:flex;
+	position:absolute;
+	top:0;
+	background-color:white;
+	width:100%;
+	height:100%;
+	justify-content:center;
+	align-items:center;
+	align-content:center;
+	flex-wrap:wrap;
+}
+
+
+
+
+
+
+
+
+
+
 
