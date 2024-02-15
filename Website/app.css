@@ -22,7 +22,6 @@ body{
 }
 .title_card img{
 	height:100%;
-
 }
 .graphic_container{
 	margin: 0.5rem 0;
@@ -31,7 +30,6 @@ body{
 	flex-direction:row;
 	justify-content:center;
 	align-items:center;
-
 }
 #thunder{
 	padding:0;
