@@ -1,6 +1,6 @@
 body{
-	background: linear-gradient(rgb(255, 255, 255), rgb(255, 0, 0));
-	height: 200vh;
+	background: radial-gradient(circle, red, white); 
+	/* height: 200vh; */
 	padding:0px;
 	margin:0px;
 }
@@ -8,13 +8,10 @@ body{
 	display:flex;
 	justify-content:center;
 	width:100vw;
-	border:1px solid black;
-	/* margin: 1rem 0; */
 }
 .title_card{
 	height:5rem;
 	width:95%;
-	border:1px solid black;
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
@@ -26,10 +23,12 @@ body{
 .graphic_container{
 	margin: 0.5rem 0;
 	display:flex;
-	border:1px solid black;
 	flex-direction:row;
 	justify-content:center;
 	align-items:center;
+	position:relative;
+	top:-80px;
+
 }
 #thunder{
 	padding:0;
@@ -37,11 +36,11 @@ body{
 }
 #thunder img{
 	margin:0;
-	width:18rem;
-	height:10rem;
+	width:20rem;
+	height:12rem;
 	position:relative;
 	border-radius: 4px;
-	transition:
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 #thunder .yaml_clip{
 	font-family:'Black Ops One', system-ui;
@@ -61,39 +60,31 @@ body{
 	align-content:center;
 	flex-wrap:wrap;
 }
-main{
-	display:flex;
-	justify-content:space-between;
-	width:95%;
-	margin: 0 auto;
-	height:60%;
-	border:3px solid green;
-}
-.item{
-	border:1px solid yellow;
-	background-color:white;
 
-}
-section{
-	display:flex;
-	flex-direction:column;
-	margin:0 1rem;
-}
-.left{
-	justify-content:space-between;
 
-}
-.right{
-	flex-wrap:wrap;
-	height:100%;
-	align-content:stretch;
 
-}
 
-em{
-	font-weight:700;
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
