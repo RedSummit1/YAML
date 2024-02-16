@@ -1,5 +1,5 @@
-from openai import OpenAI as quarterinhere
-import dotenv
+from openai import OpenAI 
+from dotenv import dotenv_values
 
-config = dotenv.dotenv_values(".env")
-print(config["KEY"])
+config = dotenv_values(".env")
+model = OpenAI(api_key=config["KEY"])
