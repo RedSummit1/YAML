@@ -1,15 +1,47 @@
-## Dependencies
+#!../bin/python3
+import discord 
+from openai import OpenAI 
+from dotenv import dotenv_values
+
+class Chat(OpenAI):
+    def __init__(self):
+        config = dotenv_values(".env")
+        super().__init__(api_key=config["KEY"])
+        print("Chat is online")
+
+    def what(self):
+        print(type(self))
+
+    def read(self,*prompt):
+        output = self.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role":"system", "content":"You are a helpful assistant."},
+                {"role":"user","content":" ".join(prompt)}
+            ]
+        )
+        print(output.choices[0].message.content)
+            
+
+instance = Chat()
+instance.read()
+
+#instance.read("Finish the song..\n I\'m blue...")
+
+
+
+
+
+
 #
-#import discord 
-#from discord.ext import commands
-#from openai import OpenAI
-#from dotenv import dotenv_values
-#
-##Code portion for Chatgpt
-#
-#config = dotenv_values("~/.env") # Locate .env file
-#instance = OpenAI(api_key=config["OPEN_API_KEY"])
-#
+#        completion = client.chat.completions.create(
+#            model="gpt-3.5-turbo",
+#            messages=[
+#                {"role":"system", "content":"You are a helpful assistant."},
+#                {"role":"user","content":"Hello!"}
+#            ]
+#        )
+
 ## Need to set intents properties for discord bot
 #intents = discord.Intents.default()
 #intents.message_content = True
