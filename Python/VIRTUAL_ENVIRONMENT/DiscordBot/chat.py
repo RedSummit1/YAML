@@ -1,5 +1,4 @@
 #!../bin/python3
-import discord 
 from openai import OpenAI 
 from dotenv import dotenv_values
 
@@ -8,9 +7,6 @@ class Chat(OpenAI):
         config = dotenv_values(".env")
         super().__init__(api_key=config["KEY"])
         print("Chat is online")
-
-    def what(self):
-        print(type(self))
 
     def read(self,*prompt):
         output = self.chat.completions.create(
@@ -22,13 +18,6 @@ class Chat(OpenAI):
         )
         print(output.choices[0].message.content)
             
-
-instance = Chat()
-instance.read()
-
-#instance.read("Finish the song..\n I\'m blue...")
-
-
 
 
 
