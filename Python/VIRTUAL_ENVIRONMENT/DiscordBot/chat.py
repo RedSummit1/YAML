@@ -3,6 +3,7 @@ from openai import OpenAI
 from dotenv import dotenv_values
 
 class Chat(OpenAI):
+
     def __init__(self):
         config = dotenv_values(".env")
         super().__init__(api_key=config["KEY"])

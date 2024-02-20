@@ -100,18 +100,13 @@ main .main_container .content .divider{
 	width:33%;
 	height:100%;
 	border: 1px solid magenta;
-
-
 }
 
 a img{
-	
 	height:200px;
 	width:200px;
 	position:relative;
 	top:25%;
-
-
 }
 
 
