@@ -104,6 +104,16 @@ main .main_container .content .divider{
 
 }
 
+a img{
+	
+	height:200px;
+	width:200px;
+	position:relative;
+	top:25%;
+
+
+}
+
 
 
 
