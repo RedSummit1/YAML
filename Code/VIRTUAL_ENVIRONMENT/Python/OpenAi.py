@@ -17,25 +17,30 @@ class Chat(OpenAI):
         print("Chat is online")
 
     def read(self,*prompt):
-        response = ""
         Chat.cycle({"role":"user","content": " ".join(prompt)})
         output = self.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
                 {"role":"system", "content":"You're seething with anger!!"},
                 *Chat.queue
-                #{"role":"user","content":" ".join(prompt)}
             ],
         )
-        #for chunk in output:
-        #    block = chunk.choices[0].delta.content
-        #    if block != " ":
-        #        yield(block if block else "\n")
-        #        #,end="",flush=True)
-        #    response += block if block else ""
 
         Chat.cycle({"role":"assistant","content":output.choices[0].message.content})
         return Chat.queue[-1]["content"]
+
+    def draw(self,*prompt):
+        response = self.images.generate(
+            model="dall-e-3",
+            prompt=" ".join(prompt),
+            size="1024x1024",
+            quality="standard",
+            n=1,
+        )
+
+        image_url = response.data[0].url
+        return image_url
+
    
     
     
